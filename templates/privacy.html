@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Privacy Policy - CardioPredict</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-pink': '#fce7f3',
+                            'secondary-pink': '#fbcfe8',
+                            'accent-pink': '#f9a8d4',
+                            'dark-pink': '#ec4899',
+                            'soft-gray': '#f8fafc'
+                        },
+                        animation: {
+                            'heartbeat': 'heartbeat 2s ease-in-out infinite'
+                        },
+                        keyframes: {
+                            heartbeat: {
+                                '0%, 100%': {
+                                    transform: 'scale(1)'
+                                },
+                                '50%': {
+                                    transform: 'scale(1.03)'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            body {
+                background: linear-gradient(135deg, #ffffff 0%, #fef7ff 50%, #f9fafb 100%);
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            }
+            .gradient-text {
+                background: linear-gradient(135deg, #ec4899, #be185d);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .pink-gradient {
+                background: linear-gradient(135deg, #ec4899, #f472b6);
+            }
+        </style>
+    </head>
+    <body class="min-h-screen">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+            <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-3">
+                        <div class="animate-heartbeat">
+                            <a href="#home">
+                                <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#home" class="text-lg font-bold text-gray-800">CardioPredict</a>
+                            <p class="text-xs text-gray-500">Heart Health Assessment</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/#Home" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Home</a>
+                        <a href="/#assessment" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Assessment</a>
+                        <a href="/#doctors" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Doctors</a>
+                        <a href="/about" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">About</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-600" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-gray-100">
+                    <div class="space-y-3">
+                        <a href="/#Home" class="block text-gray-600 hover:text-pink-600 transition-colors">Home</a>
+                        <a href="/#assessment" class="block text-gray-600 hover:text-pink-600 transition-colors">Assessment</a>
+                        <a href="/#doctors" class="block text-gray-600 hover:text-pink-600 transition-colors">Doctors</a>
+                        <a href="/about" class="block text-gray-600 hover:text-pink-600 transition-colors">About</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block p-4 rounded-full bg-pink-50 mb-8">
+                    <i class="fas fa-shield-alt text-4xl text-pink-500"></i>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                Privacy <span class="gradient-text">Policy</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-4">
+                Your privacy is our priority. Learn how we protect and handle your information.
+            </p>
+                <p class="text-sm text-gray-500">Last updated: January 20, 2025</p>
+            </div>
+        </section>
+
+        <!-- Privacy Content -->
+        <section class="py-8 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+
+                    <!-- Introduction -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Introduction</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                        CardioPredict ("we," "our," or "us") is committed to protecting your privacy and ensuring the security of your personal and health information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our heart disease risk assessment tool and website.
+                    </p>
+                        <div class="bg-pink-50 border border-pink-200 rounded-lg p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-heart text-pink-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="text-pink-800 font-medium text-sm">Health Information Protection</p>
+                                    <p class="text-pink-700 text-sm mt-1">
+                                    We understand the sensitive nature of health information and have implemented strict measures to protect your data privacy and security.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Information We Collect -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Information We Collect</h2>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Health Assessment Data</h3>
+                        <p class="text-gray-600 mb-4">
+                        When you use our heart disease risk assessment tool, we process the following health information:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Age and gender</li>
+                            <li>Blood pressure measurements</li>
+                            <li>Cholesterol levels</li>
+                            <li>Blood sugar levels</li>
+                            <li>Heart rate and ECG information</li>
+                            <li>Exercise tolerance and symptoms</li>
+                            <li>Other cardiovascular risk factors</li>
+                        </ul>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Technical Information</h3>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Browser type and version</li>
+                            <li>Device information</li>
+                            <li>IP address (anonymized)</li>
+                            <li>Usage patterns and preferences</li>
+                        </ul>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Contact Information</h3>
+                        <p class="text-gray-600 mb-4">
+                        If you contact us through our support channels, we may collect:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Name and email address</li>
+                            <li>Phone number (optional)</li>
+                            <li>Message content and correspondence</li>
+                        </ul>
+                    </div>
+
+                    <!-- How We Use Information -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">How We Use Your Information</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-blue-800 mb-2">Assessment Processing</h4>
+                                <p class="text-blue-700 text-sm">
+                                Health data is processed locally in your browser to generate risk assessments using our machine learning algorithms.
+                            </p>
+                            </div>
+                            <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-green-800 mb-2">Service Improvement</h4>
+                                <p class="text-green-700 text-sm">
+                                Anonymized usage data helps us improve the accuracy and user experience of our assessment tool.
+                            </p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-4">We use your information specifically to:</p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Provide heart disease risk assessments</li>
+                            <li>Improve our machine learning algorithms</li>
+                            <li>Respond to your inquiries and provide support</li>
+                            <li>Ensure the security and functionality of our service</li>
+                            <li>Comply with legal and regulatory requirements</li>
+                        </ul>
+                    </div>
+
+                    <!-- Data Protection -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Data Protection & Security</h2>
+
+                        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 mb-6">
+                            <h4 class="font-semibold text-gray-800 mb-3">Security Measures</h4>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="flex items-center">
+                                    <i class="fas fa-lock text-green-500 mr-2"></i>
+                                    <span class="text-gray-700 text-sm">End-to-end encryption</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-server text-blue-500 mr-2"></i>
+                                    <span class="text-gray-700 text-sm">Secure servers</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-user-shield text-purple-500 mr-2"></i>
+                                    <span class="text-gray-700 text-sm">Access controls</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-eye-slash text-orange-500 mr-2"></i>
+                                    <span class="text-gray-700 text-sm">Anonymization</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-4">
+                        We implement industry-standard security measures including:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>SSL/TLS encryption for all data transmission</li>
+                            <li>Local browser processing (no server-side health data storage)</li>
+                            <li>Regular security audits and updates</li>
+                            <li>Restricted access to personal information</li>
+                            <li>Data minimization practices</li>
+                        </ul>
+                    </div>
+
+                    <!-- Information Sharing -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Information Sharing</h2>
+
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-ban text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="text-red-800 font-medium">We Do NOT Share Personal Health Information</p>
+                                    <p class="text-red-700 text-sm mt-1">
+                                    Your health assessment data is never shared, sold, or distributed to third parties for commercial purposes.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-4">
+                        We may share limited, non-health information only in these circumstances:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>
+                                <strong>Service Providers:</strong> Trusted partners who help operate our website (hosting, analytics)</li>
+                            <li>
+                                <strong>Legal Requirements:</strong> When required by law, court order, or legal process</li>
+                            <li>
+                                <strong>Safety:</strong> To protect rights, property, or safety of users or others</li>
+                            <li>
+                                <strong>Business Transfer:</strong> In case of merger or acquisition (with same privacy protections)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Your Rights -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Your Privacy Rights</h2>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div class="bg-purple-50 border border-purple-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-purple-800 mb-2">
+                                    <i class="fas fa-eye mr-2"></i>Access
+                            </h4>
+                                <p class="text-purple-700 text-sm">
+                                Request information about data we have collected about you.
+                            </p>
+                            </div>
+                            <div class="bg-orange-50 border border-orange-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-orange-800 mb-2">
+                                    <i class="fas fa-edit mr-2"></i>Correction
+                            </h4>
+                                <p class="text-orange-700 text-sm">
+                                Request correction of inaccurate or incomplete information.
+                            </p>
+                            </div>
+                            <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-red-800 mb-2">
+                                    <i class="fas fa-trash mr-2"></i>Deletion
+                            </h4>
+                                <p class="text-red-700 text-sm">
+                                Request deletion of your personal information.
+                            </p>
+                            </div>
+                            <div class="bg-teal-50 border border-teal-200 rounded-lg p-4">
+                                <h4 class="font-semibold text-teal-800 mb-2">
+                                    <i class="fas fa-download mr-2"></i>Portability
+                            </h4>
+                                <p class="text-teal-700 text-sm">
+                                Request a copy of your data in a portable format.
+                            </p>
+                            </div>
+                        </div>
+
+                        <p class="text-gray-600 mb-4">
+                        To exercise these rights, please contact us at <a href="mailto:privacy@cardiopredict.com" class="text-pink-600 hover:text-pink-700">privacy@cardiopredict.com</a>
+                        </p>
+                    </div>
+
+                    <!-- Cookies -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Cookies and Tracking</h2>
+
+                        <p class="text-gray-600 mb-4">
+                        We use minimal cookies and tracking technologies for:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>
+                                <strong>Essential Cookies:</strong> Required for website functionality</li>
+                            <li>
+                                <strong>Performance Cookies:</strong> Help us understand how the site is used</li>
+                            <li>
+                                <strong>Preference Cookies:</strong> Remember your settings and preferences</li>
+                        </ul>
+
+                        <p class="text-gray-600 mb-4">
+                        You can control cookies through your browser settings. Note that disabling certain cookies may affect website functionality.
+                    </p>
+                    </div>
+
+                    <!-- Children's Privacy -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Children's Privacy</h2>
+
+                        <p class="text-gray-600 mb-4">
+                        Our service is not intended for children under 18 years of age. We do not knowingly collect personal information from children under 18. If you believe we have collected information from a child under 18, please contact us immediately.
+                    </p>
+                    </div>
+
+                    <!-- International Users -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">International Users</h2>
+
+                        <p class="text-gray-600 mb-4">
+                        Our service is hosted in the United States. If you are accessing our service from outside the US, please be aware that your information may be transferred to, stored, and processed in the US where our servers are located and our central database is operated.
+                    </p>
+                    </div>
+
+                    <!-- Policy Updates -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Policy Updates</h2>
+
+                        <p class="text-gray-600 mb-4">
+                        We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last updated" date. We encourage you to review this Privacy Policy periodically for any changes.
+                    </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="bg-pink-50 border border-pink-200 rounded-lg p-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                        <p class="text-gray-600 mb-4">
+                        If you have any questions about this Privacy Policy or our privacy practices, please contact us:
+                    </p>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Email</h4>
+                                <a href="mailto:privacy@cardiopredict.com" class="text-pink-600 hover:text-pink-700">privacy@cardiopredict.com</a>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Phone</h4>
+                                <a href="tel:+1-555-CARDIO" class="text-pink-600 hover:text-pink-700">+1 (555) CARDIO</a>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Address</h4>
+                                <p class="text-gray-600 text-sm">
+                                CardioPredict, Inc.<br>
+                                123 Health Tech Drive<br>
+                                San Francisco, CA 94105
+                            </p>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Response Time</h4>
+                                <p class="text-gray-600 text-sm">
+                                We will respond to privacy inquiries within 30 days of receipt.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-100 py-12">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Company Info -->
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="animate-heartbeat">
+                                <a href="#home">
+                                    <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#home">
+                                    <h3 class="font-bold text-gray-800">CardioPredict</h3>
+                                </a>
+                                <p class="text-gray-600 text-xs">Heart Health Assessment</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">
+                        Empowering individuals with advanced heart health insights through technology.
+                    </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Quick Links</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a href="#Home" class="text-gray-600 hover:text-pink-600 transition-colors">Home</a>
+                            </li>
+                            <li>
+                                <a href="#assessment" class="text-gray-600 hover:text-pink-600 transition-colors">Assessment</a>
+                            </li>
+                            <li>
+                                <a href="#doctors" class="text-gray-600 hover:text-pink-600 transition-colors">Doctors</a>
+                            </li>
+                            <li>
+                                <a href="/about" class="text-gray-600 hover:text-pink-600 transition-colors">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Support</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a href="/faq" class="text-gray-600 hover:text-pink-600 transition-colors">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" class="text-gray-600 hover:text-pink-600 transition-colors">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="/terms" class="text-gray-600 hover:text-pink-600 transition-colors">Terms</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="text-gray-600 hover:text-pink-600 transition-colors">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Footer -->
+                <div class="border-t border-gray-100 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-600 text-xs">
+                    © 2025 CardioPredict. All rights reserved.
+                </p>
+                    <div class="flex flex-col items-start mt-3 md:mt-0 text-sm text-gray-600 font-light">
+                        <span class="flex items-center space-x-1">
+                            <span>Made with</span>
+                            <span class="text-red-500 text-base">❤</span>
+                            <span>by</span>
+                            <span class="text-gray-800 font-medium tracking-wide">Saurabh Yadav</span>
+                        </span>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="https://github.com/Sau152004" target="_blank" class="text-gray-600 hover:text-black transition-colors duration-200">
+                                <!-- GitHub Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.97.11-.75.41-1.26.74-1.55-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.45.11-3.03 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.74.11 3.03.75.81 1.2 1.84 1.2 3.1 0 4.45-2.7 5.42-5.27 5.7.42.36.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.29 0 .3.21.66.8.55A10.5 10.5 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/saurabh-yadav-44947625b/" target="_blank" class="text-blue-700 hover:text-blue-900 transition-colors duration-200">
+                                <!-- LinkedIn Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm7 0h3.6v1.71h.05c.5-.95 1.72-1.95 3.55-1.95 3.8 0 4.5 2.5 4.5 5.75V21h-4v-5.25c0-1.25 0-2.86-1.75-2.86s-2.02 1.36-2.02 2.77V21h-4V9z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script>
+            // Mobile menu toggle
+            document
+                .getElementById('mobileMenuBtn')
+                .addEventListener('click', function () {
+                    const menu = document.getElementById('mobileMenu');
+                    menu
+                        .classList
+                        .toggle('hidden');
+                });
+
+            // Smooth scroll for anchor links
+            document
+                .querySelectorAll('a[href^="#"]')
+                .forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                        }
+                    });
+                });
+        </script>
+    </body>
+</html>

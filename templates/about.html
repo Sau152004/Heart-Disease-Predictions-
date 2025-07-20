@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>About Us - CardioPredict</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-pink': '#fce7f3',
+                            'secondary-pink': '#fbcfe8',
+                            'accent-pink': '#f9a8d4',
+                            'dark-pink': '#ec4899',
+                            'soft-gray': '#f8fafc'
+                        },
+                        animation: {
+                            'heartbeat': 'heartbeat 2s ease-in-out infinite',
+                            'float': 'float 3s ease-in-out infinite',
+                            'pulse-gentle': 'pulse-gentle 2s ease-in-out infinite'
+                        },
+                        keyframes: {
+                            heartbeat: {
+                                '0%, 100%': {
+                                    transform: 'scale(1)'
+                                },
+                                '50%': {
+                                    transform: 'scale(1.03)'
+                                }
+                            },
+                            float: {
+                                '0%, 100%': {
+                                    transform: 'translateY(0px)'
+                                },
+                                '50%': {
+                                    transform: 'translateY(-10px)'
+                                }
+                            },
+                            'pulse-gentle': {
+                                '0%, 100%': {
+                                    opacity: '1'
+                                },
+                                '50%': {
+                                    opacity: '0.7'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            body {
+                background: linear-gradient(135deg, #ffffff 0%, #fef7ff 50%, #f9fafb 100%);
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            }
+            .gradient-text {
+                background: linear-gradient(135deg, #ec4899, #be185d);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .pink-gradient {
+                background: linear-gradient(135deg, #ec4899, #f472b6);
+            }
+            .card-hover {
+                transition: all 0.3s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+            }
+        </style>
+    </head>
+    <body class="min-h-screen">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+            <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-3">
+                        <div class="animate-heartbeat">
+                            <a href="/#home">
+                                <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#Home" class="text-lg font-bold text-gray-800">CardioPredict</a>
+                            <p class="text-xs text-gray-500">Heart Health Assessment</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/#Home" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Home</a>
+                        <a href="/#assessment" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Assessment</a>
+                        <a href="/#Doctors" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Doctors</a>
+                        <a href="/about" class="text-pink-600 font-medium">About</a>
+
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-600" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-gray-100">
+                    <div class="space-y-3">
+                        <a href="/#Home" class="block text-gray-600 hover:text-pink-600 transition-colors">Home</a>
+                        <a href="/#assessment" class="block text-gray-600 hover:text-pink-600 transition-colors">Assessment</a>
+                        <a href="/#about" class="block text-pink-600 font-medium">About Us</a>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="py-20 px-4 relative overflow-hidden">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="inline-block p-3 rounded-full bg-pink-50 mb-6">
+                            <i class="fas fa-users text-3xl text-pink-500"></i>
+                        </div>
+                        <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-6 leading-tight">
+                        About <span class="gradient-text">CardioPredict</span>
+                        </h1>
+                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Empowering individuals with AI-driven heart health insights to make informed decisions about their cardiovascular wellbeing.
+                    </p>
+                        <div class="flex flex-wrap gap-4">
+                            <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
+                                <i class="fas fa-brain text-pink-500 mr-2"></i>
+                                <span class="text-gray-700 font-medium">AI-Powered</span>
+                            </div>
+                            <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
+                                <i class="fas fa-shield-alt text-pink-500 mr-2"></i>
+                                <span class="text-gray-700 font-medium">HIPAA Compliant</span>
+                            </div>
+                            <div class="flex items-center bg-pink-50 px-4 py-2 rounded-full">
+                                <i class="fas fa-graduation-cap text-pink-500 mr-2"></i>
+                                <span class="text-gray-700 font-medium">Research-Based</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="animate-float">
+                            <div class="bg-gradient-to-br from-pink-100 to-pink-200 rounded-3xl p-8 shadow-xl">
+                                <div class="grid grid-cols-2 gap-6">
+                                    <div class="bg-white rounded-xl p-4 text-center shadow-md">
+                                        <i class="fas fa-heartbeat text-3xl text-pink-500 mb-2"></i>
+                                        <p class="text-2xl font-bold text-gray-800">500K+</p>
+                                        <p class="text-sm text-gray-600">Assessments</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-4 text-center shadow-md">
+                                        <i class="fas fa-user-md text-3xl text-pink-500 mb-2"></i>
+                                        <p class="text-2xl font-bold text-gray-800">1,200+</p>
+                                        <p class="text-sm text-gray-600">Healthcare Partners</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-4 text-center shadow-md">
+                                        <i class="fas fa-chart-line text-3xl text-pink-500 mb-2"></i>
+                                        <p class="text-2xl font-bold text-gray-800">94%</p>
+                                        <p class="text-sm text-gray-600">Accuracy Rate</p>
+                                    </div>
+                                    <div class="bg-white rounded-xl p-4 text-center shadow-md">
+                                        <i class="fas fa-globe text-3xl text-pink-500 mb-2"></i>
+                                        <p class="text-2xl font-bold text-gray-800">25+</p>
+                                        <p class="text-sm text-gray-600">Countries</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Mission</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    To democratize cardiovascular health assessment through cutting-edge artificial intelligence, making heart disease prevention accessible to everyone, everywhere.
+                </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="card-hover bg-white rounded-2xl p-8 shadow-lg text-center">
+                        <div class="inline-block p-4 rounded-full bg-blue-50 mb-6">
+                            <i class="fas fa-eye text-3xl text-blue-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Early Detection</h3>
+                        <p class="text-gray-600">
+                        Identifying cardiovascular risks early when prevention and intervention are most effective, potentially saving lives through timely awareness.
+                    </p>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-2xl p-8 shadow-lg text-center">
+                        <div class="inline-block p-4 rounded-full bg-green-50 mb-6">
+                            <i class="fas fa-hand-holding-heart text-3xl text-green-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Accessible Care</h3>
+                        <p class="text-gray-600">
+                        Breaking down barriers to cardiovascular health assessment, making professional-grade risk evaluation available to underserved communities worldwide.
+                    </p>
+                    </div>
+
+                    <div class="card-hover bg-white rounded-2xl p-8 shadow-lg text-center">
+                        <div class="inline-block p-4 rounded-full bg-purple-50 mb-6">
+                            <i class="fas fa-lightbulb text-3xl text-purple-500"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-4">Health Education</h3>
+                        <p class="text-gray-600">
+                        Empowering individuals with knowledge about their cardiovascular health, enabling informed decisions and lifestyle changes for better outcomes.
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Story Section -->
+        <section class="py-16 px-4 bg-gradient-to-r from-pink-50 to-purple-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Story</h2>
+                        <div class="space-y-6 text-gray-600">
+                            <p>
+                            CardioPredict was born from a simple yet powerful observation: cardiovascular disease remains the leading cause of death globally, yet many cases are preventable with early detection and intervention.
+                        </p>
+                            <p>
+                            Founded in 2020 by a team of cardiologists, data scientists, and public health experts, we recognized that traditional cardiovascular risk assessment tools were often complex, expensive, and inaccessible to many who needed them most.
+                        </p>
+                            <p>
+                            Our breakthrough came when we realized that machine learning could democratize expert-level cardiovascular risk assessment. By training our algorithms on vast datasets of cardiovascular outcomes, we created a tool that could provide accurate, personalized risk assessments in minutes, not hours.
+                        </p>
+                            <p>
+                            Today, CardioPredict serves hundreds of thousands of users worldwide, helping them understand their cardiovascular risk and take proactive steps toward better heart health.
+                        </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="bg-white rounded-2xl p-8 shadow-xl">
+                            <div class="space-y-6">
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-pink-500 rounded-full mr-4"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">2020</p>
+                                        <p class="text-gray-600">CardioPredict founded</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-pink-500 rounded-full mr-4"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">2021</p>
+                                        <p class="text-gray-600">First AI model deployed</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-pink-500 rounded-full mr-4"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">2022</p>
+                                        <p class="text-gray-600">100,000 assessments milestone</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-pink-500 rounded-full mr-4"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">2023</p>
+                                        <p class="text-gray-600">Healthcare partnerships launched</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-pink-500 rounded-full mr-4"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">2024</p>
+                                        <p class="text-gray-600">Global expansion to 25 countries</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-4 h-4 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full mr-4 animate-pulse-gentle"></div>
+                                    <div>
+                                        <p class="font-semibold text-gray-800">2025</p>
+                                        <p class="text-gray-600">500,000+ assessments completed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Meet Our Team</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    A diverse group of experts united by our passion for improving cardiovascular health through technology.
+                </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 1 -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-pink-100 to-pink-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-user-md text-3xl text-pink-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Dr. Sarah Chen</h3>
+                        <p class="text-pink-600 font-medium mb-3">Chief Medical Officer</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                        Interventional cardiologist with 15+ years of experience. Former director of cardiovascular research at Johns Hopkins.
+                    </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-pink-500 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-brain text-3xl text-blue-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Dr. Marcus Rodriguez</h3>
+                        <p class="text-blue-600 font-medium mb-3">Chief Technology Officer</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                        AI researcher and machine learning expert. PhD in Computer Science from Stanford, specializing in healthcare AI.
+                    </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-blue-500 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-green-100 to-green-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-chart-line text-3xl text-green-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Dr. Emily Thompson</h3>
+                        <p class="text-green-600 font-medium mb-3">Head of Public Health</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                        Epidemiologist focused on cardiovascular disease prevention. MPH from Harvard, former CDC researcher.
+                    </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-green-500 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-green-500 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-code text-3xl text-purple-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Alex Kim</h3>
+                        <p class="text-purple-600 font-medium mb-3">Lead Software Engineer</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                        Full-stack developer with expertise in healthcare systems. Former senior engineer at Google Health.
+                    </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-purple-500 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-purple-500 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 5 -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-orange-100 to-orange-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-3xl text-orange-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Jessica Park</h3>
+                        <p class="text-orange-600 font-medium mb-3">Chief Privacy Officer</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                        Healthcare privacy expert with JD in health law. Ensures HIPAA compliance and data protection.
+                    </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-orange-500 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 6 -->
+                    <div class="card-hover bg-white rounded-2xl p-6 shadow-lg text-center">
+                        <div class="w-24 h-24 bg-gradient-to-br from-teal-100 to-teal-200 rounded-full mx-auto mb-4 flex items-center justify-center">
+                            <i class="fas fa-users text-3xl text-teal-600"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">David Wilson</h3>
+                        <p class="text-teal-600 font-medium mb-3">Head of Partnerships</p>
+                        <p class="text-gray-600 text-sm mb-4">
+                        Healthcare business development leader. MBA from Wharton, former VP at leading health tech companies.
+                    </p>
+                        <div class="flex justify-center space-x-3">
+                            <a href="#" class="text-gray-400 hover:text-teal-500 transition-colors">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-teal-500 transition-colors">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="py-16 px-4 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Our Values</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    The principles that guide everything we do at CardioPredict.
+                </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-pink-50 rounded-lg mr-4">
+                                <i class="fas fa-heart text-2xl text-pink-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Patient-First Approach</h3>
+                                <p class="text-gray-600">
+                                Every decision we make is guided by what's best for the people using our service. Their health, privacy, and experience are our top priorities.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-blue-50 rounded-lg mr-4">
+                                <i class="fas fa-microscope text-2xl text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Scientific Rigor</h3>
+                                <p class="text-gray-600">
+                                Our algorithms are built on peer-reviewed research and validated against real-world outcomes. We never compromise on scientific accuracy.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-green-50 rounded-lg mr-4">
+                                <i class="fas fa-globe text-2xl text-green-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Global Accessibility</h3>
+                                <p class="text-gray-600">
+                                Healthcare shouldn't be limited by geography or economics. We're committed to making our tools accessible worldwide.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-8 shadow-lg">
+                        <div class="flex items-start">
+                            <div class="p-3 bg-purple-50 rounded-lg mr-4">
+                                <i class="fas fa-lock text-2xl text-purple-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-800 mb-3">Privacy Protection</h3>
+                                <p class="text-gray-600">
+                                Your health data is sacred. We employ the highest standards of data protection and give you complete control over your information.
+                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                Ready to Take Control of Your Heart Health?
+            </h2>
+                <p class="text-xl text-gray-600 mb-8">
+                Join hundreds of thousands who have already taken the first step toward better cardiovascular health.
+            </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#assessment" class="pink-gradient text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center">
+                        <i class="fas fa-heartbeat mr-2"></i>
+                    Start Your Assessment
+                </a>
+                    <a href="contact.html" class="bg-white text-gray-800 border-2 border-gray-200 px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 inline-flex items-center justify-center">
+                        <i class="fas fa-envelope mr-2"></i>
+                    Contact Our Team
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-100 py-12">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Company Info -->
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="animate-heartbeat">
+                                <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">CardioPredict</h3>
+                                <p class="text-gray-600 text-xs">Heart Health Assessment</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">
+                        Empowering individuals with advanced heart health insights through technology.
+                    </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-4">Quick Links</h4>
+                        <div class="space-y-2 text-sm">
+                            <a href="/#Home" class="block text-gray-600 hover:text-pink-600 text-sm transition-colors">Home</a>
+                            <a href="/#assessment" class="block text-gray-600 hover:text-pink-600 text-sm transition-colors">Assessment</a>
+                            <a href="/#Doctors" class="block text-gray-600 hover:text-pink-600 text-sm transition-colors">Doctors</a>
+                            <a href="/about" class="block text-gray-600 hover:text-pink-600 text-sm transition-colors">About</a>
+
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Support</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a href="/faq" class="text-gray-600 hover:text-pink-600 transition-colors">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" class="text-gray-600 hover:text-pink-600 transition-colors">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="/terms" class="text-gray-600 hover:text-pink-600 transition-colors">Terms</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="text-gray-600 hover:text-pink-600 transition-colors">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-8 mt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <p class="text-gray-500 text-sm">
+                        © 2025 CardioPredict. All rights reserved.
+                    </p>
+                        <div class="flex flex-col items-start mt-3 md:mt-0 text-sm text-gray-600 font-light">
+                            <span class="flex items-center space-x-1">
+                                <span>Made with</span>
+                                <span class="text-red-500 text-base">❤</span>
+                                <span>by</span>
+                                <span class="text-gray-800 font-medium tracking-wide">Saurabh Yadav</span>
+                            </span>
+                            <div class="flex space-x-4 mt-2">
+                                <a href="https://github.com/Sau152004" target="_blank" class="text-gray-600 hover:text-black transition-colors duration-200">
+                                    <!-- GitHub Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.97.11-.75.41-1.26.74-1.55-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.45.11-3.03 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.74.11 3.03.75.81 1.2 1.84 1.2 3.1 0 4.45-2.7 5.42-5.27 5.7.42.36.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.29 0 .3.21.66.8.55A10.5 10.5 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/saurabh-yadav-44947625b/" target="_blank" class="text-blue-700 hover:text-blue-900 transition-colors duration-200">
+                                    <!-- LinkedIn Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm7 0h3.6v1.71h.05c.5-.95 1.72-1.95 3.55-1.95 3.8 0 4.5 2.5 4.5 5.75V21h-4v-5.25c0-1.25 0-2.86-1.75-2.86s-2.02 1.36-2.02 2.77V21h-4V9z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Mobile Menu Script -->
+        <script>
+            document
+                .getElementById('mobileMenuBtn')
+                .addEventListener('click', function () {
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    mobileMenu
+                        .classList
+                        .toggle('hidden');
+                });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function (event) {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+
+                if (!mobileMenuBtn.contains(event.target) && !mobileMenu.contains(event.target)) {
+                    mobileMenu
+                        .classList
+                        .add('hidden');
+                }
+            });
+
+            // Add smooth scrolling for anchor links
+            document
+                .querySelectorAll('a[href^="#"]')
+                .forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                        }
+                    });
+                });
+        </script>
+
+    </body>
+</html>

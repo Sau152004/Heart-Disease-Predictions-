@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Terms of Service - CardioPredict</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-pink': '#fce7f3',
+                            'secondary-pink': '#fbcfe8',
+                            'accent-pink': '#f9a8d4',
+                            'dark-pink': '#ec4899',
+                            'soft-gray': '#f8fafc'
+                        },
+                        animation: {
+                            'heartbeat': 'heartbeat 2s ease-in-out infinite'
+                        },
+                        keyframes: {
+                            heartbeat: {
+                                '0%, 100%': {
+                                    transform: 'scale(1)'
+                                },
+                                '50%': {
+                                    transform: 'scale(1.03)'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            body {
+                background: linear-gradient(135deg, #ffffff 0%, #fef7ff 50%, #f9fafb 100%);
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            }
+            .gradient-text {
+                background: linear-gradient(135deg, #ec4899, #be185d);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .pink-gradient {
+                background: linear-gradient(135deg, #ec4899, #f472b6);
+            }
+        </style>
+    </head>
+    <body class="min-h-screen">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+            <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-3">
+                        <div class="animate-heartbeat">
+                            <a href="#home">
+                                <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#home" class="text-lg font-bold text-gray-800">CardioPredict</a>
+                            <p class="text-xs text-gray-500">Heart Health Assessment</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/#Home" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Home</a>
+                        <a href="/#assessment" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Assessment</a>
+                        <a href="/#doctors" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Doctors</a>
+                        <a href="/about" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">About</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-600" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-gray-100">
+                    <div class="space-y-3">
+                        <a href="/#Home" class="block text-gray-600 hover:text-pink-600 transition-colors">Home</a>
+                        <a href="/#assessment" class="block text-gray-600 hover:text-pink-600 transition-colors">Assessment</a>
+                        <a href="/#doctors" class="block text-gray-600 hover:text-pink-600 transition-colors">Doctors</a>
+                        <a href="/about" class="block text-gray-600 hover:text-pink-600 transition-colors">About</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-block p-4 rounded-full bg-pink-50 mb-8">
+                    <i class="fas fa-file-contract text-4xl text-pink-500"></i>
+                </div>
+                <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                Terms of <span class="gradient-text">Service</span>
+                </h1>
+                <p class="text-lg text-gray-600 mb-4">
+                Please read these terms carefully before using our heart health assessment service.
+            </p>
+                <p class="text-sm text-gray-500">Last updated: January 20, 2025</p>
+            </div>
+        </section>
+
+        <!-- Terms Content -->
+        <section class="py-8 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+
+                    <!-- Introduction -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Agreement to Terms</h2>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                        By accessing and using CardioPredict ("Service," "we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                    </p>
+                        <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-exclamation-triangle text-red-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="text-red-800 font-medium text-sm">Important Medical Disclaimer</p>
+                                    <p class="text-red-700 text-sm mt-1">
+                                    CardioPredict is an educational tool only and does not provide medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for medical decisions.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Service Description -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Service Description</h2>
+                        <p class="text-gray-600 mb-4">
+                        CardioPredict provides a heart disease risk assessment tool that uses machine learning algorithms to analyze cardiovascular risk factors. Our service includes:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Interactive health assessment questionnaire</li>
+                            <li>Machine learning-based risk analysis</li>
+                            <li>Educational information about heart health</li>
+                            <li>Recommendations for further medical consultation</li>
+                            <li>Access to healthcare provider directory</li>
+                        </ul>
+                    </div>
+
+                    <!-- Eligibility -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Eligibility</h2>
+                        <p class="text-gray-600 mb-4">
+                        To use our service, you must:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Be at least 18 years of age</li>
+                            <li>Have the legal capacity to enter into this agreement</li>
+                            <li>Provide accurate and truthful information</li>
+                            <li>Use the service for personal, non-commercial purposes only</li>
+                        </ul>
+                    </div>
+
+                    <!-- User Responsibilities -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">User Responsibilities</h2>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Accurate Information</h3>
+                        <p class="text-gray-600 mb-4">
+                        You agree to provide accurate, current, and complete health information. Inaccurate information may lead to incorrect risk assessments.
+                    </p>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Appropriate Use</h3>
+                        <p class="text-gray-600 mb-4">
+                        You agree to use the service appropriately and not to:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Use the service for emergency medical situations</li>
+                            <li>Rely solely on our assessment for medical decisions</li>
+                            <li>Share or distribute your assessment results inappropriately</li>
+                            <li>Attempt to reverse-engineer our algorithms</li>
+                            <li>Use automated systems to access the service</li>
+                        </ul>
+                    </div>
+
+                    <!-- Medical Disclaimers -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Medical Disclaimers and Limitations</h2>
+
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-stethoscope text-yellow-600 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="text-yellow-800 font-medium text-sm">Not a Medical Device</p>
+                                    <p class="text-yellow-700 text-sm mt-1">
+                                    CardioPredict is not a medical device and has not been evaluated by the FDA or other regulatory agencies.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Limitations of AI Assessment</h3>
+                        <p class="text-gray-600 mb-4">
+                        Our machine learning algorithms are based on statistical models and population data. They cannot account for all individual factors and should never replace professional medical evaluation. The assessment may not detect all conditions or risk factors.
+                    </p>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Emergency Situations</h3>
+                        <p class="text-gray-600 mb-4">
+                        If you are experiencing chest pain, shortness of breath, or other cardiac emergency symptoms, seek immediate medical attention. Do not use this service for emergency medical situations.
+                    </p>
+                    </div>
+
+                    <!-- Privacy and Data Use -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Privacy and Data Use</h2>
+                        <p class="text-gray-600 mb-4">
+                        Your privacy is important to us. Please review our Privacy Policy for detailed information about how we collect, use, and protect your data. Key points include:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Health information is encrypted and securely stored</li>
+                            <li>Data is used only for providing the assessment service</li>
+                            <li>We do not sell personal health information to third parties</li>
+                            <li>You may request deletion of your data at any time</li>
+                            <li>Aggregated, anonymized data may be used for research purposes</li>
+                        </ul>
+                    </div>
+
+                    <!-- Intellectual Property -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Intellectual Property</h2>
+                        <p class="text-gray-600 mb-4">
+                        The CardioPredict service, including all content, features, algorithms, and functionality, is owned by us and protected by copyright, trademark, and other intellectual property laws. You may not:
+                    </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                            <li>Copy, modify, or distribute our content or algorithms</li>
+                            <li>Use our trademarks without permission</li>
+                            <li>Create derivative works based on our service</li>
+                            <li>Reverse engineer our machine learning models</li>
+                        </ul>
+                    </div>
+
+                    <!-- Disclaimers and Limitations -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Disclaimers and Limitations of Liability</h2>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Service Availability</h3>
+                        <p class="text-gray-600 mb-4">
+                        We strive to maintain service availability but cannot guarantee uninterrupted access. The service may be temporarily unavailable due to maintenance, updates, or technical issues.
+                    </p>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Limitation of Liability</h3>
+                        <p class="text-gray-600 mb-4">
+                        To the fullest extent permitted by law, CardioPredict shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, or medical complications arising from use of the service.
+                    </p>
+
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Medical Decisions Disclaimer</h3>
+                        <p class="text-gray-600 mb-4">
+                        We are not responsible for any medical decisions made based on our assessment results. Users assume full responsibility for seeking appropriate medical care and making informed health decisions.
+                    </p>
+                    </div>
+
+                    <!-- Indemnification -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Indemnification</h2>
+                        <p class="text-gray-600 mb-4">
+                        You agree to indemnify and hold harmless CardioPredict, its officers, directors, employees, and agents from any claims, damages, losses, or expenses arising from your use of the service or violation of these terms.
+                    </p>
+                    </div>
+
+                    <!-- Termination -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Termination</h2>
+                        <p class="text-gray-600 mb-4">
+                        We reserve the right to terminate or suspend access to our service immediately, without prior notice, for any reason, including breach of these terms. You may also terminate your use of the service at any time.
+                    </p>
+                    </div>
+
+                    <!-- Governing Law -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Governing Law</h2>
+                        <p class="text-gray-600 mb-4">
+                        These terms shall be governed by and construed in accordance with the laws of the United States, without regard to conflict of law principles. Any disputes shall be resolved through binding arbitration.
+                    </p>
+                    </div>
+
+                    <!-- Changes to Terms -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Changes to Terms</h2>
+                        <p class="text-gray-600 mb-4">
+                        We reserve the right to modify these terms at any time. Changes will be posted on this page with an updated "Last modified" date. Your continued use of the service after changes constitutes acceptance of the new terms.
+                    </p>
+                    </div>
+
+                    <!-- Contact Information -->
+                    <div class="mb-8">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Information</h2>
+                        <p class="text-gray-600 mb-4">
+                        If you have any questions about these Terms of Service, please contact us:
+                    </p>
+                        <div class="bg-pink-50 border border-pink-200 rounded-lg p-4">
+                            <div class="space-y-2 text-gray-600">
+                                <p>
+                                    <i class="fas fa-envelope mr-2 text-pink-500"></i> Email: legal@cardiopredict.com</p>
+                                <p>
+                                    <i class="fas fa-phone mr-2 text-pink-500"></i> Phone: 1-800-CARDIO-1</p>
+                                <p>
+                                    <i class="fas fa-map-marker-alt mr-2 text-pink-500"></i> Address: 123 Health Tech Drive, Medical City, MC 12345</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Final Notice -->
+                    <div class="border-t border-gray-200 pt-6">
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-info-circle text-blue-500 mt-1 mr-3"></i>
+                                <div>
+                                    <p class="text-blue-800 font-medium text-sm">Important Reminder</p>
+                                    <p class="text-blue-700 text-sm mt-1">
+                                    By using CardioPredict, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. This service is for educational purposes only and should not replace professional medical advice.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-100 py-12">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Company Info -->
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="animate-heartbeat">
+                                <a href="#home">
+                                    <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#home">
+                                    <h3 class="font-bold text-gray-800">CardioPredict</h3>
+                                </a>
+                                <p class="text-gray-600 text-xs">Heart Health Assessment</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">
+                        Empowering individuals with advanced heart health insights through technology.
+                    </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-4">Quick Links</h4>
+                        <div class="space-y-2 text-sm">
+                            <a href="#Home" class="block text-gray-600 hover:text-pink-600 text-sm transition-colors">Home</a>
+                            <a href="#assessment" class="block text-gray-600 hover:text-pink-600 text-sm transition-colors">Assessment</a>
+                            <a href="#doctors" class="block text-gray-600 hover:text-pink-600 text-sm transition-colors">Doctors</a>
+                            <a href="/about" class="block text-gray-600 hover:text-pink-600 text-sm transition-colors">About</a>
+                        </div>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Support</h4>
+                        <ul class="space-y-2 text-sm ">
+                            <li>
+                                <a href="/faq" class="text-gray-600 hover:text-pink-600 transition-colors">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" class="text-gray-600 hover:text-pink-600 transition-colors">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="/terms" class="text-gray-600 hover:text-pink-600 transition-colors">Terms</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="text-gray-600 hover:text-pink-600 transition-colors">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="border-t border-gray-200 pt-8 mt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <p class="text-gray-500 text-sm">
+                        © 2025 CardioPredict. All rights reserved.
+                    </p>
+
+                        <div class="flex flex-col items-start mt-3 md:mt-0 text-sm text-gray-600 font-light">
+                            <span class="flex items-center space-x-1">
+                                <span>Made with</span>
+                                <span class="text-red-500 text-base">❤</span>
+                                <span>by</span>
+                                <span class="text-gray-800 font-medium tracking-wide">Saurabh Yadav</span>
+                            </span>
+                            <div class="flex space-x-4 mt-2">
+                                <a href="https://github.com/Sau152004" target="_blank" class="text-gray-600 hover:text-black transition-colors duration-200">
+                                    <!-- GitHub Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.97.11-.75.41-1.26.74-1.55-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.45.11-3.03 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.74.11 3.03.75.81 1.2 1.84 1.2 3.1 0 4.45-2.7 5.42-5.27 5.7.42.36.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.29 0 .3.21.66.8.55A10.5 10.5 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://www.linkedin.com/in/saurabh-yadav-44947625b/" target="_blank" class="text-blue-700 hover:text-blue-900 transition-colors duration-200">
+                                    <!-- LinkedIn Icon -->
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm7 0h3.6v1.71h.05c.5-.95 1.72-1.95 3.55-1.95 3.8 0 4.5 2.5 4.5 5.75V21h-4v-5.25c0-1.25 0-2.86-1.75-2.86s-2.02 1.36-2.02 2.77V21h-4V9z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Mobile Menu Script -->
+        <script>
+            document
+                .getElementById('mobileMenuBtn')
+                .addEventListener('click', function () {
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    mobileMenu
+                        .classList
+                        .toggle('hidden');
+                });
+        </script>
+
+    </body>
+</html>

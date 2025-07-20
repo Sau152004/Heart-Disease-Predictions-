@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FAQ - CardioPredict</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-pink': '#fce7f3',
+                            'secondary-pink': '#fbcfe8',
+                            'accent-pink': '#f9a8d4',
+                            'dark-pink': '#ec4899',
+                            'soft-gray': '#f8fafc'
+                        },
+                        animation: {
+                            'float': 'float 4s ease-in-out infinite',
+                            'fade-in': 'fadeIn 0.6s ease-out',
+                            'slide-up': 'slideUp 0.5s ease-out',
+                            'heartbeat': 'heartbeat 2s ease-in-out infinite'
+                        },
+                        keyframes: {
+                            float: {
+                                '0%, 100%': {
+                                    transform: 'translateY(0px)'
+                                },
+                                '50%': {
+                                    transform: 'translateY(-8px)'
+                                }
+                            },
+                            fadeIn: {
+                                '0%': {
+                                    opacity: '0'
+                                },
+                                '100%': {
+                                    opacity: '1'
+                                }
+                            },
+                            slideUp: {
+                                '0%': {
+                                    transform: 'translateY(15px)',
+                                    opacity: '0'
+                                },
+                                '100%': {
+                                    transform: 'translateY(0)',
+                                    opacity: '1'
+                                }
+                            },
+                            heartbeat: {
+                                '0%, 100%': {
+                                    transform: 'scale(1)'
+                                },
+                                '50%': {
+                                    transform: 'scale(1.03)'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            body {
+                background: linear-gradient(135deg, #ffffff 0%, #fef7ff 50%, #f9fafb 100%);
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            }
+            .glass-card {
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+            }
+            .gradient-text {
+                background: linear-gradient(135deg, #ec4899, #be185d);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .pink-gradient {
+                background: linear-gradient(135deg, #ec4899, #f472b6);
+            }
+            .soft-shadow {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            .elegant-shadow {
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            }
+        </style>
+    </head>
+    <body class="min-h-screen">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+            <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-3">
+                        <div class="animate-heartbeat">
+                            <a href="#home">
+                                <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/#home" class="text-lg font-bold text-gray-800">CardioPredict</a>
+                            <p class="text-xs text-gray-500">Heart Health Assessment</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/#Home" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Home</a>
+                        <a href="/#assessment" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Assessment</a>
+                        <a href="/#doctors" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Doctors</a>
+                        <a href="/#about" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">About</a>
+
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-600" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-gray-100">
+                    <div class="space-y-3">
+                        <a href="/#Home" class="block text-gray-600 hover:text-pink-600 transition-colors">Home</a>
+                        <a href="/#assessment" class="block text-gray-600 hover:text-pink-600 transition-colors">Assessment</a>
+                        <a href="/#doctors" class="block text-gray-600 hover:text-pink-600 transition-colors">Doctors</a>
+                        <a href="/#about" class="block text-gray-600 hover:text-pink-600 transition-colors">About</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="animate-fade-in">
+                    <div class="inline-block p-4 rounded-full bg-pink-50 mb-8 animate-float">
+                        <i class="fas fa-question-circle text-4xl text-pink-500"></i>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                    Frequently Asked <span class="gradient-text">Questions</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Find answers to common questions about our heart disease risk assessment tool.
+                </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Bar -->
+        <section class="py-8 px-4">
+            <div class="max-w-2xl mx-auto">
+                <div class="relative">
+                    <input type="text" id="searchFAQ" placeholder="Search frequently asked questions..." 
+                    class="w-full p-4 pl-12 border border-gray-200 rounded-xl focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all bg-white soft-shadow">
+                    <i class="fas fa-search absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Categories -->
+        <section class="py-8 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-4 mb-12">
+                    <button onclick="filterFAQ('all')" class="category-btn active px-6 py-2 rounded-full border-2 border-pink-500 bg-pink-500 text-white font-medium transition-all">
+                    All Questions
+                </button>
+                    <button onclick="filterFAQ('general')" class="category-btn px-6 py-2 rounded-full border-2 border-pink-200 text-pink-600 font-medium transition-all hover:bg-pink-50">
+                    General
+                </button>
+                    <button onclick="filterFAQ('technical')" class="category-btn px-6 py-2 rounded-full border-2 border-pink-200 text-pink-600 font-medium transition-all hover:bg-pink-50">
+                    Technical
+                </button>
+                    <button onclick="filterFAQ('medical')" class="category-btn px-6 py-2 rounded-full border-2 border-pink-200 text-pink-600 font-medium transition-all hover:bg-pink-50">
+                    Medical
+                </button>
+                    <button onclick="filterFAQ('privacy')" class="category-btn px-6 py-2 rounded-full border-2 border-pink-200 text-pink-600 font-medium transition-all hover:bg-pink-50">
+                    Privacy
+                </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Content -->
+        <section class="py-8 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-4" id="faqContainer">
+
+                    <!-- General Questions -->
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="general">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(1)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">What is CardioPredict and how does it work?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon1"></i>
+                            </div>
+                        </button>
+                        <div id="answer1" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">CardioPredict is a heart disease risk assessment tool that uses machine learning algorithms to analyze your cardiovascular risk factors. It evaluates 13 different medical parameters including age, blood pressure, cholesterol levels, and other cardiac indicators to provide an instant risk assessment.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="general">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(2)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">How accurate is the heart disease prediction?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon2"></i>
+                            </div>
+                        </button>
+                        <div id="answer2" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">Our machine learning model achieves 91.4% accuracy based on extensive medical datasets containing thousands of cardiac cases. However, this tool is designed for educational purposes and preliminary screening only. It should never replace professional medical consultation or diagnosis.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="general">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(3)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Can I use this tool multiple times?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon3"></i>
+                            </div>
+                        </button>
+                        <div id="answer3" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">Yes! You can use our heart health assessment tool as many times as you need. It's available 24/7 and takes just 2 minutes to complete. This is useful for tracking changes in your health status over time or getting assessments for family members.</p>
+                        </div>
+                    </div>
+
+                    <!-- Technical Questions -->
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="technical">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(4)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">What web browsers are supported?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon4"></i>
+                            </div>
+                        </button>
+                        <div id="answer4" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">CardioPredict works on all modern web browsers including Chrome, Firefox, Safari, and Edge. It's also fully responsive and works perfectly on mobile devices and tablets. We recommend using the latest version of your browser for the best experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="technical">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(5)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Do I need to create an account to use the tool?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon5"></i>
+                            </div>
+                        </button>
+                        <div id="answer5" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">No account creation is required! Our tool is designed to be completely anonymous and accessible. Simply visit our website, fill out the assessment form, and get your results instantly. This approach ensures maximum privacy and convenience.</p>
+                        </div>
+                    </div>
+
+                    <!-- Medical Questions -->
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="medical">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(6)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Do I need medical records to use this tool?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon6"></i>
+                            </div>
+                        </button>
+                        <div id="answer6" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">No medical records are required. The assessment uses basic health information that most people know about themselves, such as age, blood pressure, cholesterol levels, and family history. If you don't know some values, we recommend consulting with your healthcare provider.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="medical">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(7)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">What should I do if the tool indicates high risk?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon7"></i>
+                            </div>
+                        </button>
+                        <div id="answer7" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">If the assessment indicates high risk, it's important to schedule an appointment with a cardiologist or your primary care physician as soon as possible. The tool provides recommendations including lifestyle modifications, additional testing, and professional medical consultation. Remember, early detection and intervention can significantly improve outcomes.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="medical">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(8)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Can this tool diagnose heart disease?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon8"></i>
+                            </div>
+                        </button>
+                        <div id="answer8" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">No, this tool cannot diagnose heart disease. It provides a risk assessment based on statistical models and should be used as a preliminary screening tool only. Actual diagnosis requires comprehensive medical examination, laboratory tests, imaging studies, and professional medical interpretation by qualified healthcare providers.</p>
+                        </div>
+                    </div>
+
+                    <!-- Privacy Questions -->
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="privacy">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(9)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Is my health data secure and private?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon9"></i>
+                            </div>
+                        </button>
+                        <div id="answer9" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">Yes, your privacy is our top priority. All health data is encrypted during transmission and processing. We do not store personal health information on our servers, and all data is processed locally in your browser. We never share, sell, or distribute personal health information to third parties.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="privacy">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(10)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Do you use cookies or track user behavior?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon10"></i>
+                            </div>
+                        </button>
+                        <div id="answer10" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">We use minimal, non-invasive cookies only for essential website functionality and performance optimization. We do not track personal health information or create user profiles. Our focus is on providing the assessment tool while maintaining your complete anonymity and privacy.</p>
+                        </div>
+                    </div>
+
+                    <!-- General Technical -->
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="technical">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(11)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">How long does the assessment take?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon11"></i>
+                            </div>
+                        </button>
+                        <div id="answer11" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">The complete heart health assessment takes approximately 2 minutes to complete. The form includes 13 medical parameters, and once submitted, you'll receive instant results with detailed recommendations and confidence scores.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item bg-white rounded-lg soft-shadow" data-category="general">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(12)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Is this tool suitable for all age groups?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon12"></i>
+                            </div>
+                        </button>
+                        <div id="answer12" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">The tool is designed for adults and is most accurate for individuals aged 18 and above. The machine learning model was trained on adult cardiac data, so it may not be as accurate for pediatric assessments. For children and adolescents, please consult with a pediatric cardiologist.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- No Results Message -->
+                <div id="noResults" class="hidden text-center py-12">
+                    <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+                    <h3 class="text-xl font-semibold text-gray-600 mb-2">No Results Found</h3>
+                    <p class="text-gray-500">Try adjusting your search terms or browse by category.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section class="py-16 px-4 bg-gray-50/50">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Still Have Questions?</h2>
+                <p class="text-gray-600 mb-8">Can't find what you're looking for? Our support team is here to help.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="pink-gradient text-white font-semibold py-4 px-8 rounded-full transition-all transform hover:scale-105 elegant-shadow">
+                        <i class="fas fa-envelope mr-2"></i>
+                    Contact Support
+                </a>
+                    <a href="mailto:support@cardiopredict.com" class="bg-white border border-gray-200 text-gray-700 font-semibold py-4 px-8 rounded-full transition-all hover:bg-gray-50 soft-shadow">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                    Email Us
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-100 py-12">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Company Info -->
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="animate-heartbeat">
+                                <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">CardioPredict</h3>
+                                <p class="text-gray-600 text-xs">Heart Health Assessment</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">
+                        Empowering individuals with advanced heart health insights through technology.
+                    </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Quick Links</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a href="#Home" class="text-gray-600 hover:text-pink-600 transition-colors">Home</a>
+                            </li>
+                            <li>
+                                <a href="#assessment" class="text-gray-600 hover:text-pink-600 transition-colors">Assessment</a>
+                            </li>
+                            <li>
+                                <a href="#doctors" class="text-gray-600 hover:text-pink-600 transition-colors">Doctors</a>
+                            </li>
+                            <li>
+                                <a href="/about" class="text-gray-600 hover:text-pink-600 transition-colors">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Support</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a href="/faq" class="text-gray-600 hover:text-pink-600 transition-colors">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" class="text-gray-600 hover:text-pink-600 transition-colors">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="/terms" class="text-gray-600 hover:text-pink-600 transition-colors">Terms</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="text-gray-600 hover:text-pink-600 transition-colors">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Footer -->
+                <div class="border-t border-gray-100 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-600 text-xs">
+                    © 2025 CardioPredict. All rights reserved.
+                </p>
+                    <div class="flex flex-col items-start mt-3 md:mt-0 text-sm text-gray-600 font-light">
+                        <span class="flex items-center space-x-1">
+                            <span>Made with</span>
+                            <span class="text-red-500 text-base">❤</span>
+                            <span>by</span>
+                            <span class="text-gray-800 font-medium tracking-wide">Saurabh Yadav</span>
+                        </span>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="https://github.com/Sau152004" target="_blank" class="text-gray-600 hover:text-black transition-colors duration-200">
+                                <!-- GitHub Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.97.11-.75.41-1.26.74-1.55-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.45.11-3.03 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.74.11 3.03.75.81 1.2 1.84 1.2 3.1 0 4.45-2.7 5.42-5.27 5.7.42.36.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.29 0 .3.21.66.8.55A10.5 10.5 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/saurabh-yadav-44947625b/" target="_blank" class="text-blue-700 hover:text-blue-900 transition-colors duration-200">
+                                <!-- LinkedIn Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm7 0h3.6v1.71h.05c.5-.95 1.72-1.95 3.55-1.95 3.8 0 4.5 2.5 4.5 5.75V21h-4v-5.25c0-1.25 0-2.86-1.75-2.86s-2.02 1.36-2.02 2.77V21h-4V9z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script>
+            // Mobile menu toggle
+            document
+                .getElementById('mobileMenuBtn')
+                .addEventListener('click', function () {
+                    const menu = document.getElementById('mobileMenu');
+                    menu
+                        .classList
+                        .toggle('hidden');
+                });
+
+            // FAQ toggle
+            function toggleFAQ(id) {
+                const answer = document.getElementById(`answer${id}`);
+                const icon = document.getElementById(`icon${id}`);
+
+                answer
+                    .classList
+                    .toggle('hidden');
+                icon
+                    .classList
+                    .toggle('rotate-180');
+            }
+
+            // FAQ search functionality
+            document
+                .getElementById('searchFAQ')
+                .addEventListener('input', function (e) {
+                    const searchTerm = e
+                        .target
+                        .value
+                        .toLowerCase();
+                    const faqItems = document.querySelectorAll('.faq-item');
+                    let visibleItems = 0;
+
+                    faqItems.forEach(item => {
+                        const question = item
+                            .querySelector('h3')
+                            .textContent
+                            .toLowerCase();
+                        const answer = item
+                            .querySelector('div[id^="answer"]')
+                            .textContent
+                            .toLowerCase();
+
+                        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                            item.style.display = 'block';
+                            visibleItems++;
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+
+                    // Show/hide no results message
+                    const noResults = document.getElementById('noResults');
+                    if (visibleItems === 0 && searchTerm !== '') {
+                        noResults
+                            .classList
+                            .remove('hidden');
+                    } else {
+                        noResults
+                            .classList
+                            .add('hidden');
+                    }
+                });
+
+            // Category filtering
+            function filterFAQ(category) {
+                const faqItems = document.querySelectorAll('.faq-item');
+                const categoryBtns = document.querySelectorAll('.category-btn');
+
+                // Update active button
+                categoryBtns.forEach(btn => {
+                    btn
+                        .classList
+                        .remove('active', 'bg-pink-500', 'text-white');
+                    btn
+                        .classList
+                        .add('border-pink-200', 'text-pink-600');
+                });
+
+                event
+                    .target
+                    .classList
+                    .add('active', 'bg-pink-500', 'text-white');
+                event
+                    .target
+                    .classList
+                    .remove('border-pink-200', 'text-pink-600');
+
+                // Filter items
+                faqItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Clear search when filtering
+                document
+                    .getElementById('searchFAQ')
+                    .value = '';
+                document
+                    .getElementById('noResults')
+                    .classList
+                    .add('hidden');
+            }
+        </script>
+    </body>
+</html>

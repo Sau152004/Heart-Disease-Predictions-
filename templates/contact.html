@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact Us - CardioPredict</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'primary-pink': '#fce7f3',
+                            'secondary-pink': '#fbcfe8',
+                            'accent-pink': '#f9a8d4',
+                            'dark-pink': '#ec4899',
+                            'soft-gray': '#f8fafc'
+                        },
+                        animation: {
+                            'float': 'float 4s ease-in-out infinite',
+                            'fade-in': 'fadeIn 0.6s ease-out',
+                            'slide-up': 'slideUp 0.5s ease-out',
+                            'heartbeat': 'heartbeat 2s ease-in-out infinite'
+                        },
+                        keyframes: {
+                            float: {
+                                '0%, 100%': {
+                                    transform: 'translateY(0px)'
+                                },
+                                '50%': {
+                                    transform: 'translateY(-8px)'
+                                }
+                            },
+                            fadeIn: {
+                                '0%': {
+                                    opacity: '0'
+                                },
+                                '100%': {
+                                    opacity: '1'
+                                }
+                            },
+                            slideUp: {
+                                '0%': {
+                                    transform: 'translateY(15px)',
+                                    opacity: '0'
+                                },
+                                '100%': {
+                                    transform: 'translateY(0)',
+                                    opacity: '1'
+                                }
+                            },
+                            heartbeat: {
+                                '0%, 100%': {
+                                    transform: 'scale(1)'
+                                },
+                                '50%': {
+                                    transform: 'scale(1.03)'
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            body {
+                background: linear-gradient(135deg, #ffffff 0%, #fef7ff 50%, #f9fafb 100%);
+                font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            }
+            .glass-card {
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(12px);
+                border: 1px solid rgba(255, 255, 255, 0.5);
+            }
+            .gradient-text {
+                background: linear-gradient(135deg, #ec4899, #be185d);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            .pink-gradient {
+                background: linear-gradient(135deg, #ec4899, #f472b6);
+            }
+            .soft-shadow {
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            }
+            .elegant-shadow {
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            }
+        </style>
+    </head>
+    <body class="min-h-screen">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b border-gray-100">
+            <nav class="max-w-6xl mx-auto px-4 sm:px-6">
+                <div class="flex justify-between items-center h-16">
+                    <!-- Logo -->
+                    <div class="flex items-center space-x-3">
+                        <div class="animate-heartbeat">
+                            <a href="/#home">
+                                <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                            </a>
+                        </div>
+                        <div>
+                            <a href="/#home" class="text-lg font-bold text-gray-800">CardioPredict</a>
+                            <p class="text-xs text-gray-500">Heart Health Assessment</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <a href="/#Home" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Home</a>
+                        <a href="/#assessment" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Assessment</a>
+                        <a href="/#doctors" class="text-gray-600 hover:text-pink-600 transition-colors font-medium">Doctors</a>
+                        <a href="/about" class="block text-gray-600 hover:text-pink-600 transition-colors">About</a>
+
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden text-gray-600" id="mobileMenuBtn">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="hidden md:hidden py-4 border-t border-gray-100">
+                    <div class="space-y-3">
+                        <a href="/#Home" class="block text-gray-600 hover:text-pink-600 transition-colors">Home</a>
+                        <a href="/#assessment" class="block text-gray-600 hover:text-pink-600 transition-colors">Assessment</a>
+                        <a href="/#doctors" class="block text-gray-600 hover:text-pink-600 transition-colors">Doctors</a>
+                        <a href="/#about" class="block text-pink-600">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="animate-fade-in">
+                    <div class="inline-block p-4 rounded-full bg-pink-50 mb-8 animate-float">
+                        <i class="fas fa-envelope text-4xl text-pink-500"></i>
+                    </div>
+                    <h1 class="text-3xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                    Get in <span class="gradient-text">Touch</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Have questions about our heart health assessment? We're here to help. 
+                    Reach out to our support team for assistance.
+                </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information -->
+        <section class="py-12">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                    <!-- Phone -->
+                    <div class="glass-card rounded-xl p-6 text-center soft-shadow">
+                        <div class="w-12 h-12 pink-gradient rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-phone text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Phone Support</h3>
+                        <p class="text-gray-600 text-sm mb-3">Monday - Friday, 9AM - 6PM EST</p>
+                        <a href="tel:+1-555-CARDIO" class="text-pink-600 font-semibold hover:text-pink-700">+1 (555) CARDIO</a>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="glass-card rounded-xl p-6 text-center soft-shadow">
+                        <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Email Support</h3>
+                        <p class="text-gray-600 text-sm mb-3">We'll respond within 24 hours</p>
+                        <a href="mailto:support@cardiopredict.com" class="text-pink-600 font-semibold hover:text-pink-700">support@cardiopredict.com</a>
+                    </div>
+
+                    <!-- Emergency -->
+                    <div class="glass-card rounded-xl p-6 text-center soft-shadow">
+                        <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-ambulance text-white"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800 mb-2">Medical Emergency</h3>
+                        <p class="text-gray-600 text-sm mb-3">For immediate medical attention</p>
+                        <a href="tel:911" class="text-red-600 font-semibold hover:text-red-700">Call 911</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="py-16 px-4 bg-gray-50/50">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Send Us a Message</h2>
+                    <p class="text-gray-600">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                </div>
+
+                <div class="bg-white rounded-2xl elegant-shadow overflow-hidden">
+                    <form id="contactForm" class="p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- First Name -->
+                            <div class="form-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-user text-pink-500 mr-2"></i>First Name
+                            </label>
+                                <input type="text" id="firstName" name="firstName" required
+                                class="w-full p-3 border border-gray-200 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all bg-gray-50 hover:bg-white">
+                            </div>
+
+                            <!-- Last Name -->
+                            <div class="form-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-user text-pink-500 mr-2"></i>Last Name
+                            </label>
+                                <input type="text" id="lastName" name="lastName" required
+                                class="w-full p-3 border border-gray-200 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all bg-gray-50 hover:bg-white">
+                            </div>
+
+                            <!-- Email -->
+                            <div class="form-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-envelope text-blue-500 mr-2"></i>Email Address
+                            </label>
+                                <input type="email" id="email" name="email" required
+                                class="w-full p-3 border border-gray-200 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all bg-gray-50 hover:bg-white">
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="form-group">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-phone text-green-500 mr-2"></i>Phone Number (Optional)
+                            </label>
+                                <input type="tel" id="phone" name="phone"
+                                class="w-full p-3 border border-gray-200 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all bg-gray-50 hover:bg-white">
+                            </div>
+
+                            <!-- Subject -->
+                            <div class="form-group col-span-1 md:col-span-2">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-tag text-purple-500 mr-2"></i>Subject
+                            </label>
+                                <select id="subject" name="subject" required
+                                class="w-full p-3 border border-gray-200 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all bg-gray-50 hover:bg-white">
+                                    <option value="">Select a subject...</option>
+                                    <option value="general">General Inquiry</option>
+                                    <option value="technical">Technical Support</option>
+                                    <option value="medical">Medical Questions</option>
+                                    <option value="partnership">Partnership Opportunity</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Message -->
+                            <div class="form-group col-span-1 md:col-span-2">
+                                <label class="block text-gray-700 font-medium mb-2">
+                                    <i class="fas fa-message text-teal-500 mr-2"></i>Message
+                            </label>
+                                <textarea id="message" name="message" rows="6" required
+                                class="w-full p-3 border border-gray-200 rounded-lg focus:border-pink-500 focus:ring-2 focus:ring-pink-100 transition-all bg-gray-50 hover:bg-white resize-none"
+                                placeholder="Tell us how we can help you..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Privacy Notice -->
+                        <div class="mt-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+                            <div class="flex items-start">
+                                <i class="fas fa-shield-alt text-blue-500 mt-0.5 mr-3"></i>
+                                <div>
+                                    <p class="text-blue-800 font-medium text-sm">Privacy Notice</p>
+                                    <p class="text-blue-700 text-xs mt-1">
+                                    Your information is secure and will only be used to respond to your inquiry. 
+                                    We never share personal information with third parties.
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="mt-8 text-center">
+                            <button type="submit" id="submitBtn" 
+                            class="pink-gradient text-white font-semibold py-4 px-12 rounded-full transition-all transform hover:scale-105 elegant-shadow">
+                                <span class="btn-text">
+                                    <i class="fas fa-paper-plane mr-2"></i>
+                                Send Message
+                            </span>
+                                <div class="loader hidden">
+                                    <div class="animate-spin rounded-full h-5 w-5 border-b-2 border-white mx-auto"></div>
+                                </div>
+                            </button>
+                            <p class="text-gray-500 mt-3 text-sm">We'll get back to you within 24 hours</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Modal -->
+        <div id="successModal" class="hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+            <div class="bg-white rounded-2xl elegant-shadow max-w-md w-full mx-4 transform transition-all">
+                <div class="p-8 text-center">
+                    <div class="text-5xl mb-4">✅</div>
+                    <h3 class="text-2xl font-bold mb-4 text-green-600">Message Sent!</h3>
+                    <div class="text-gray-600 mb-6">
+                        <p>Thank you for contacting us. We've received your message and will respond within 24 hours.</p>
+                    </div>
+                    <button onclick="closeSuccessModal()" class="w-full pink-gradient text-white font-semibold py-3 px-6 rounded-full transition-all">
+                        <i class="fas fa-check mr-2"></i>Close
+                </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4">Frequently Asked Questions</h2>
+                    <p class="text-gray-600">Quick answers to common questions</p>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white rounded-lg soft-shadow">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(1)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">How accurate is the heart disease prediction?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon1"></i>
+                            </div>
+                        </button>
+                        <div id="answer1" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">Our machine learning model achieves 91.4% accuracy based on extensive medical datasets. However, this tool is for educational purposes only and should not replace professional medical advice.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white rounded-lg soft-shadow">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(2)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Is my health data secure?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon2"></i>
+                            </div>
+                        </button>
+                        <div id="answer2" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">Yes, all health data is encrypted and processed securely. We do not store personal health information on our servers, and all data is processed locally for your privacy.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white rounded-lg soft-shadow">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(3)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Can I use this tool multiple times?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon3"></i>
+                            </div>
+                        </button>
+                        <div id="answer3" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">Absolutely! You can use our heart health assessment tool as many times as you need. It's available 24/7 and takes just 2 minutes to complete.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-white rounded-lg soft-shadow">
+                        <button class="w-full p-6 text-left focus:outline-none focus:ring-2 focus:ring-pink-500 rounded-lg" onclick="toggleFAQ(4)">
+                            <div class="flex justify-between items-center">
+                                <h3 class="font-semibold text-gray-800">Do I need medical records to use this tool?</h3>
+                                <i class="fas fa-chevron-down text-gray-500 transform transition-transform" id="icon4"></i>
+                            </div>
+                        </button>
+                        <div id="answer4" class="hidden px-6 pb-6">
+                            <p class="text-gray-600">No medical records are required. The assessment uses basic health information that most people know about themselves, such as age, blood pressure, and cholesterol levels.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-8">
+                    <p class="text-gray-600 mb-4">Still have questions?</p>
+                    <a href="#contactForm" class="inline-flex items-center text-pink-600 font-semibold hover:text-pink-700">
+                        <i class="fas fa-envelope mr-2"></i>
+                    Contact our support team
+                </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-white border-t border-gray-100 py-12">
+            <div class="max-w-6xl mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <!-- Company Info -->
+                    <div class="col-span-1 md:col-span-2">
+                        <div class="flex items-center space-x-3 mb-4">
+                            <div class="animate-heartbeat">
+                                <i class="fas fa-heartbeat text-2xl text-pink-500"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-800">CardioPredict</h3>
+                                <p class="text-gray-600 text-xs">Heart Health Assessment</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm">
+                        Empowering individuals with advanced heart health insights through technology.
+                    </p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Quick Links</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a href="/#Home" class="text-gray-600 hover:text-pink-600 transition-colors">Home</a>
+                            </li>
+                            <li>
+                                <a href="/#assessment" class="text-gray-600 hover:text-pink-600 transition-colors">Assessment</a>
+                            </li>
+                            <li>
+                                <a href="/#doctors" class="text-gray-600 hover:text-pink-600 transition-colors">Doctors</a>
+                            </li>
+                            <li>
+                                <a href="/about" class="text-gray-600 hover:text-pink-600 transition-colors">About</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Support -->
+                    <div>
+                        <h4 class="font-semibold text-gray-800 mb-3">Support</h4>
+                        <ul class="space-y-2 text-sm">
+                            <li>
+                                <a href="/faq" class="text-gray-600 hover:text-pink-600 transition-colors">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="/privacy" class="text-gray-600 hover:text-pink-600 transition-colors">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="/terms" class="text-gray-600 hover:text-pink-600 transition-colors">Terms</a>
+                            </li>
+                            <li>
+                                <a href="/contact" class="text-gray-600 hover:text-pink-600 transition-colors">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Footer -->
+                <div class="border-t border-gray-100 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-600 text-xs">
+                    © 2025 CardioPredict. All rights reserved.
+                </p>
+                    <div class="flex flex-col items-start mt-3 md:mt-0 text-sm text-gray-600 font-light">
+                        <span class="flex items-center space-x-1">
+                            <span>Made with</span>
+                            <span class="text-red-500 text-base">❤</span>
+                            <span>by</span>
+                            <span class="text-gray-800 font-medium tracking-wide">Saurabh Yadav</span>
+                        </span>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="https://github.com/Sau152004" target="_blank" class="text-gray-600 hover:text-black transition-colors duration-200">
+                                <!-- GitHub Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.15-.02-2.09-3.2.7-3.88-1.38-3.88-1.38-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.77 2.73 1.26 3.4.97.11-.75.41-1.26.74-1.55-2.56-.29-5.26-1.28-5.26-5.72 0-1.26.45-2.29 1.2-3.1-.12-.29-.52-1.45.11-3.03 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.74.11 3.03.75.81 1.2 1.84 1.2 3.1 0 4.45-2.7 5.42-5.27 5.7.42.36.8 1.1.8 2.22 0 1.6-.01 2.89-.01 3.29 0 .3.21.66.8.55A10.5 10.5 0 0 0 23.5 12c0-6.27-5.23-11.5-11.5-11.5z"/>
+                                </svg>
+                            </a>
+                            <a href="https://www.linkedin.com/in/saurabh-yadav-44947625b/" target="_blank" class="text-blue-700 hover:text-blue-900 transition-colors duration-200">
+                                <!-- LinkedIn Icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3V9zm7 0h3.6v1.71h.05c.5-.95 1.72-1.95 3.55-1.95 3.8 0 4.5 2.5 4.5 5.75V21h-4v-5.25c0-1.25 0-2.86-1.75-2.86s-2.02 1.36-2.02 2.77V21h-4V9z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script>
+            // Mobile menu toggle
+            document
+                .getElementById('mobileMenuBtn')
+                .addEventListener('click', function () {
+                    const menu = document.getElementById('mobileMenu');
+                    menu
+                        .classList
+                        .toggle('hidden');
+                });
+
+            // Contact form submission
+            document
+                .getElementById('contactForm')
+                .addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const submitBtn = document.getElementById('submitBtn');
+                    const loader = submitBtn.querySelector('.loader');
+                    const btnText = submitBtn.querySelector('.btn-text');
+
+                    // Show loading state
+                    submitBtn.disabled = true;
+                    btnText.style.display = 'none';
+                    loader
+                        .classList
+                        .remove('hidden');
+
+                    // Simulate form submission
+                    setTimeout(() => {
+                        // Reset button
+                        submitBtn.disabled = false;
+                        btnText.style.display = 'inline';
+                        loader
+                            .classList
+                            .add('hidden');
+
+                        // Show success modal
+                        document
+                            .getElementById('successModal')
+                            .classList
+                            .remove('hidden');
+
+                        // Reset form
+                        this.reset();
+                    }, 2000);
+                });
+
+            // Close success modal
+            function closeSuccessModal() {
+                document
+                    .getElementById('successModal')
+                    .classList
+                    .add('hidden');
+            }
+
+            // FAQ toggle
+            function toggleFAQ(id) {
+                const answer = document.getElementById(`answer${id}`);
+                const icon = document.getElementById(`icon${id}`);
+
+                answer
+                    .classList
+                    .toggle('hidden');
+                icon
+                    .classList
+                    .toggle('rotate-180');
+            }
+
+            // Smooth scroll for anchor links
+            document
+                .querySelectorAll('a[href^="#"]')
+                .forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const target = document.querySelector(this.getAttribute('href'));
+                        if (target) {
+                            target.scrollIntoView({behavior: 'smooth', block: 'start'});
+                        }
+                    });
+                });
+        </script>
+    </body>
+</html>
